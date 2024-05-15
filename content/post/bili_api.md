@@ -17,3 +17,6 @@ weight: 1
 
 > 将 [`bilibili-API-collect`](https://github.com/SocialSisterYi/bilibili-API-collect) 改写为`swagger3`风格的yaml
 
+立下了这个flag,但是还没开始动手
+
+todo

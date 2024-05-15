@@ -43,8 +43,8 @@ services:
         id:
 
 permalinks:
-    post: /p/:slug/
     page: /:slug/
+    post: /p/:slug/
 
 params:
     mainSections:

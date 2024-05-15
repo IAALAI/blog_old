@@ -13,4 +13,6 @@ weight: 1       # You can add weight to some posts to override the default sorti
 
 # hello world
 
-init blog
+博客启动!!!
+
+> 回头可以考虑在这里编写我的该博客的启动过程

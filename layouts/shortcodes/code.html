@@ -1,0 +1,9 @@
+{{ $file_name := .Get "file"}}
+{{ $language := "" }}
+{{ $content := readFile $file_name }}
+
+<pre>
+    <code>
+        {{ $content }}
+    </code>
+</pre>
