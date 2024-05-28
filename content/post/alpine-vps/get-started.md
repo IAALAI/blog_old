@@ -5,10 +5,9 @@ slug: get-started-alpine
 date: 2024-05-15T11:28:00+08:00
 image:
 categories:
-    - none
+    - vps
 tags:
     - alpine
-    - vps
     - grub
 weight: 1
 ---

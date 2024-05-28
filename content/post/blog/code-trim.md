@@ -2,7 +2,7 @@
 title: "代码展示效果优化"
 description: "优化此博客的代码展示效果"
 slug: code-trim
-date: 2024-05-12 07:01:11+0800
+date: 2024-05-28
 image:
 categories:
     - blog
@@ -28,5 +28,12 @@ tags:
 这里的内容参考了 `vitepress` 中的功能,以及 `vitepress` 中的 `Monaco Editor` 的使用,还有 `Monaco Editor`
 
 ## 
+
+大赞 Monaco Editor
+
+<!-- https://vitepress.dev/zh/guide/markdown#advanced-configuration -->
+<!-- https://hugo-in-action.foofun.cn/zh/docs/part1/chapter4/5/ -->
+<!-- https://hugo.opendocs.io/templates/shortcode-templates/ -->
+<!-- https://gohugo.io/templates/output-formats/ -->
 
 todo
