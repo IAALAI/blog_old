@@ -1,6 +1,6 @@
 ---
 title: build nginx on alpine
-date: 2024-05-28
+date: 2024-06-3
 description: 是时候让我的VPS开始工作了,首当其中的就是http服务了
 slug: build-nginx-alpine
 image: nginx_start.png
@@ -12,7 +12,6 @@ tags:
     - nginx
     - build
     - c
-    - todo
 weight: 1
 ---
 
@@ -122,4 +121,21 @@ make install
 
 ## 设为服务
 
-alpine下并不是使用systemctl来管理服务,而是
+alpine下并不是使用systemctl来管理服务,而是使用openrc来管理服务,需要在 `/etc/init.d/` 下手动创建`nginx`
+
+``` shell
+#!/sbin/openrc-run
+
+name="nginx"
+description="nginx - high performance web server"
+command="/usr/lib/nginx/sbin/nginx"
+command_args=""
+pidfile="/usr/lib/nginx/logs/nginx.pid"
+command_background="yes"
+
+depend() {
+    need net
+}
+# 回头调整为以引入额外的链接形式导入代码
+```
+
