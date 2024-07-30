@@ -1,8 +1,8 @@
 ---
 title: Zero Trust Tunnel
 description: 强力的内网穿透工具
-# slug: zero_trust_tunnel
-date: 2024-05-21 2:57:00+0800
+slug: zero_trust_tunnel
+date: 2024-05-21
 categories:
     - none
 tags:

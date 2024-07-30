@@ -12,6 +12,7 @@ tags:
     - performance
     - todo
 weight: 1
+hidden: true
 ---
 
 # 磁盘性能对于的数据库战斗力的影响
@@ -32,11 +33,21 @@ weight: 1
 
 ## 参赛选手 `4K iops`
 
-- SAS 希捷单盘 `0.6K IOPS`
-- LSI3008 希捷 sata x4 raid0 `0.9K IOPS`
-- zfs 西数 sata x5 raid0 `1.2 IOPS`
-- sata 杂牌固态 `27K IOPS`
-- nvme 傲腾内存 `222K IOPS`
+默认文件系统皆为ext4, iops来源如下
+
+```shell
+sudo fio --name=random-read --ioengine=libaio --rw=randread --bs=4k --direct=1 --size=10G --numjobs=32 --runtime=100 --filename=/dev/* --group_reporting
+```
+
+| item | iops |
+| --- | ---|
+| SAS 希捷单盘 | 487 |
+| LSI3008 SAS 希捷 sata x4 raid0 | 1201 |
+| zfs 西数 sata x5 raid0 | 207990(arc) |
+| sata 杂牌固态 | 30623 |
+| nvme intel 傲腾M10 | 228022 |
+
+> 此处数据仅供参考,尤其是zfs带arc不可靠
 
 ## 测试方法
 
@@ -56,7 +67,7 @@ CREATE TABLE `logs`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `ip` int UNSIGNED NOT NULL COMMENT ' ',
   `user_agent` text CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL,
-  `user` varchar(40) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL,
+  `user` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL DEFAULT NULL,
   `time` bigint NOT NULL,
   `method` enum('GET','POST','PUT','DELETE','PATCH','OPTIONS','HEAD') CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `uri` text CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL,
@@ -65,10 +76,9 @@ CREATE TABLE `logs`  (
   `length` int UNSIGNED NOT NULL,
   `referer` text CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_bin ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_bin ROW_FORMAT = DYNAMIC ENGINE=InnoDB ROW_FORMAT=COMPRESSED KEY_BLOCK_SIZE=8;
 
 SET FOREIGN_KEY_CHECKS = 1;
-
 ```
  
 使用 navicat 数据生成器生成了 1000w 条数据,然后进行了以下测试,生成过程参考[此文档](https://navicat.com/en/company/aboutus/blog/1821-generating-test-data-in-navicat-16)
