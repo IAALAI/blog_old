@@ -72,7 +72,7 @@ apk add pcre-dev zlib-dev
 git clone https://github.com/libressl/portable --depth=1
 mv ./portable libressl && cd libressl
 mkdir build && cd build
-cmake -G "ninja" .. && ninja
+cmake -G "Ninja" .. && ninja
 ```
 
 如果到达此时如果工作正常应该在当前的 `libress` / `build` 目录之后应该正确的生成了 `crypto` 和 `ssl`
