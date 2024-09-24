@@ -287,7 +287,7 @@ class Search {
         return <article>
             <a href={item.permalink}>
                 <div class="article-details">
-                    <h2 class="article-title" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
+                    <h1 class="article-title" dangerouslySetInnerHTML={{ __html: item.title }}></h1>
                     <section class="article-preview" dangerouslySetInnerHTML={{ __html: item.preview }}></section>
                 </div>
                 {item.image &&

@@ -10,6 +10,7 @@ tags:
     - go
     - todo
 weight: 1
+draft: true
 ---
 
 # alist total
