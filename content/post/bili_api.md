@@ -10,7 +10,6 @@ tags:
     - swagger
     - api
     - todo
-weight: 1
 hidden: true
 ---
 

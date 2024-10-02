@@ -11,7 +11,6 @@ tags:
     - disk
     - performance
     - todo
-weight: 1
 hidden: true
 ---
 

@@ -9,7 +9,6 @@ categories:
 tags:
     - go
     - todo
-weight: 1
 draft: true
 ---
 

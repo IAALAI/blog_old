@@ -5,7 +5,6 @@ slug: "wxgzh"
 date: 2024-08-23 
 image:
 categories:
-    - wx
 tags:
     - wx
     - todo

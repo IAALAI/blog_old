@@ -12,7 +12,6 @@ tags:
     - build
     - neovim
     - todo
-weight: 1
 ---
 
 # 在 alpine 中使用 neovim

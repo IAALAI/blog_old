@@ -12,7 +12,6 @@ tags:
     - nginx
     - build
     - c
-weight: 1
 ---
 
 # 手动编译nginx

@@ -2,16 +2,14 @@
 title: Hello World
 description: init 
 slug: init
-date: 2024-04-22 05:40:00+0800
+date: 2024-04-22
+lastmod: 2024-10-02
 image: cover.jpg
 categories:
     - none
 tags:
     - none
-weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
-
-# hello world
 
 博客启动!!!
 

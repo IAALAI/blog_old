@@ -9,7 +9,6 @@ categories:
 tags:
     - alpine
     - grub
-weight: 1
 ---
 
 # 将 VPS 的系统切换为 alpine

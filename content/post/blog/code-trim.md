@@ -21,13 +21,13 @@ tags:
 
 `hugo` 支持一种叫 `shortcode` 的功能,所以这里基于 `shortcode` 来实现这个功能
 
-# 将博客的代码展示替换为 `Monaco Editor`
+## 将博客的代码展示替换为 `Monaco Editor`
 
 感觉hugo内置的代码展示功能效果一般,而且不能引入外部的代码文件,因此在次进行一点点提升
 
 这里的内容参考了 `vitepress` 中的功能,以及 `vitepress` 中的 `Monaco Editor` 的使用,还有 `Monaco Editor`
 
-## 
+## a
 
 大赞 Monaco Editor
 
